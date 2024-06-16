@@ -25,9 +25,15 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'com.mysql:mysql-connector-j:8.4.0'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.boot:spring-boot-testcontainers'
+    testImplementation 'org.testcontainers:testcontainers:1.19.8'
+    testImplementation "org.testcontainers:mysql:1.19.8"
+    testImplementation 'org.testcontainers:junit-jupiter:1.19.8'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
